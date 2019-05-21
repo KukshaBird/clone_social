@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib import auth
 
 ################################
+#COMMIT HERE
 
 class User(auth.models.User,auth.models.PermissionsMixin):
 
