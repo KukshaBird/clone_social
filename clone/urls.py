@@ -1,3 +1,4 @@
+#CLONE URLS.PY
 from django.urls import path
 # as auth_views because: don't mix it with our views below
 from django.contrib.auth import views as auth_views
