@@ -14,7 +14,7 @@ from django import template
 register = template.Library()
 
 class Group(models.Model):
-	name = models.CharField(max_length='255',unique=True)
+	name = models.CharField(max_length=255,unique=True)
 	slug = models.SlugField(allow_unicode=True,unique=True)
 	description = models.TextField(blank=True,default='')
 	description_html = models.TextField(blank=True,editable=False,default='')
@@ -29,20 +29,16 @@ class Group(models.Model):
 		super().save(*args,**kwargs)
 
 	def get_absolute_url(self):
-		return reverse("groups:single",kwargs={'slug'=self.slug})
+		return reverse("groups:single",kwargs={'slug':self.slug})
 
 
 
 class GroupMember(models.Model):
-	group = models.ForeignKey(Group,related_name='memberships')
-	user = models.ForeignKey(User,related_name='user_groups')
+	group = models.ForeignKey(Group,related_name='memberships',on_delete='CASCADE')
+	user = models.ForeignKey(User,related_name='user_groups',on_delete='CASCADE')
 
 	def __str__(self):
 		return self.user.username
 
 	class Meta:
 		unique_together = ('group','user')
-
-
-
-
