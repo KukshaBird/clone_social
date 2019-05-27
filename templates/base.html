@@ -23,15 +23,15 @@
 			<a class="navbar-brand mynav" href="{% url 'home' %}">Start Social</a>
 			<ul class="nav navbar-nav navbar-right">
 				{% if user.is_authenticated %}
-					<li><a href="{% url 'posts:create_post' %}">Post</a></li>
-					<li><a href="{% url 'groups:all' %}">Group</a></li>
-					<li><a href="{% url 'groups:create' %}">Create Group</a></li>
-					<li><a href="{% url 'clone:logout' %}">Log Out</a></li>
+					<li><a class="nav-ul" href="{% url 'posts:create_post' %}">Post</a></li>
+					<li><a class="nav-ul" href="{% url 'groups:all' %}">Group</a></li>
+					<li><a class="nav-ul" href="{% url 'groups:create' %}">Create Group</a></li>
+					<li><a class="nav-ul" href="{% url 'clone:logout' %}">Log Out</a></li>
 				{% else %}
-					<li><a href="{% url 'groups:all' %}">Groups</a></li>
-					<li><a href="{% url 'clone:login' %}">Login</a></li>
-					<li><a href="{% url 'clone:signup' %}">Sign Up</a></li>
-					<li><a href=""></a></li>
+					<li><a class="nav-ul" href="{% url 'groups:all' %}">Groups</a></li>
+					<li><a class="nav-ul" href="{% url 'clone:login' %}">Login</a></li>
+					<li><a class="nav-ul" href="{% url 'clone:signup' %}">Sign Up</a></li>
+					<li><a class="nav-ul" href=""></a></li>
 				{% endif %}
 			</ul>
 		</div>
@@ -41,6 +41,12 @@
 
 		{% endblock %}
 	</div>
+	<div class="stars-back">
+		<div class="stars"></div>
+		<div class="twinkling"></div>
+		<div class="clouds"></div>
+	</div>
+
 </body>
 
 </html>

@@ -1,6 +1,47 @@
 body {
   margin: 0;
-  overflow: hidden;
+  /*overflow: hidden;*/
   background-color: black;
   color:white;
+  font-family: 'Noto Serif KR', serif;
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png);
 }
+
+html {
+  height: 100%;
+  margin: auto;
+  overflow: scroll;
+  scroll-behavior: auto;
+}
+
+.list-group-item{
+	background-color: #454749;
+  color:white;
+  margin: 3px;
+}
+
+.form-control{
+  background-color: #454749;
+  color:white;
+}
+
+.form-group {
+  background: black;
+}
+
+.mynav {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-ul {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+

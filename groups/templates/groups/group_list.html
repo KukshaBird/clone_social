@@ -24,16 +24,16 @@
 		<div class="list-group">
 			{% for group in object_list %}
 				<a class="list-group-item" href="{% url 'groups:single' slug=group.slug %}">
-					<h4 class="title list-group-item-heading">{{ group.name }}</h3>
+					<h3 class="title list-group-item-heading">{{ group.name }}</h3>
 					<div class="list-group-item-text container-fluid">
-						{{group.description_html|safe}}
+						{{group.description|safe}}
 						<div class="row">
 							<div class="col-md-4">
 								<span class="bage">{{ group.members.count }}</span>
 								member{{ group.members.count|pluralize }}
 							</div>
 							<div class="col-md-4">
-								<span class="bage">{{ group.post.count }}</span>
+								<span class="bage">{{ group.posts.count }}</span>
 								post{{ group.posts.count|pluralize }}
 							</div>
 						</div>
